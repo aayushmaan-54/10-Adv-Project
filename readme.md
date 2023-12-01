@@ -10,6 +10,6 @@
 * Music Player
 * Text to Speech
 
-[📎Link](https://aayushmaansoni-45.github.io/)
+[📎Link](https://aayushmaansoni-45.github.io/10-Adv-Project/)
 
 [📎Udemy](https://www.udemy.com/course/make-10-advanced-professional-applications-in-javascript/)
