@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/****************** Root Variables *******************/
+:root {
+    --primary-color: #22212d;
+    --secondary-color: #302c45;
+    --ascent-color: #7359f8;
+    --tertiary-color: #66f859;
+    --complementary-color: #5cf5f5;
+    --yellow: #f8f85a;
+    --pink: #f859a8;
+}
+
+/****************** CSS RESET *******************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+optgroup,
+textarea,
+select {
+    font: inherit;
+} 
+
+html:focus-within {
+    scroll-behavior: smooth;
+} 
+
+body {
+    max-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+    background-image: url('assets/bg.svg');
+    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ascent-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 
+
+
+::selection {
+    color: var(--complementary-color);
+    background-color: var(--pink);
+}
+
+
+/****************** CSS UTILITY *******************/
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.reset-all {
+    all: unset;
+    cursor: pointer;
+}
+
+
+/****************** BASIC STYLING *******************/
+.JSlogo {
+    color: var(--yellow);
+    font-size: 5rem;
+
+    &:hover {
+        color: #f7e02a;
+    }
+}
+
+
+/****************** LINK STYLING *******************/
+.menu_link {
+    text-decoration: none;
+    color: #fff;
+    line-height: 2;
+    position: relative;
+}
+
+.menu_link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--yellow);
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: right .4s, width .4s, left .4s;
+}
+
+.menu_link:hover::before {
+    width: 110%;
+    left: 0;
+}
+
+
+.heading {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(-15deg);
+    text-underline-offset: 8px;
+    text-decoration: var(--tertiary-color) wavy underline;
+    text-decoration-skip-ink: auto;
+}
+
+
+header {
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.container {
+    margin: 1em auto;
+}
+
+.menu ul {
+    list-style: none;
+    line-height: 3em;
+    margin-top: 7em;
+    font-weight: 800;
+}
+
+
+.green {
+    color: var(--tertiary-color);
+}
+
+.blue {
+    color: var(--complementary-color);
+}
+
+.pink {
+    color: var(--pink);
+}

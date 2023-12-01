@@ -1,0 +1,77 @@
+/****************** Root Variables *******************/
+:root {
+    --primary-color: ;
+    --secondary-color ;
+    --complementary-color ;
+}
+
+
+/****************** CSS RESET *******************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+optgroup,
+textarea,
+select {
+    font: inherit;
+} 
+
+html:focus-within {
+    scroll-behavior: smooth;
+} 
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+} 
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+} 
+
+
+/****************** CSS UTILITY *******************/
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/****************** BASIC STYLING *******************/
