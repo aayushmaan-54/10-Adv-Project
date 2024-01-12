@@ -8,11 +8,11 @@ const formText = document.querySelector('.from-text'),
     translateBtn = document.querySelector('button');
 
 
-selectTag.forEach((tag, id) => {  // getting option for select tag in html
+selectTag.forEach((tag, id) => {
     for(let country_code in countries) {
         let selected;
         if(id == 0 && country_code == 'en-GB') {
-            selected = 'selected'; //selecting English by default as FROM language and Hindi as TO language
+            selected = 'selected';
         } else if(id == 1 && country_code == 'hi-IN') {
             selected = 'selected';
         }
@@ -22,7 +22,7 @@ selectTag.forEach((tag, id) => {  // getting option for select tag in html
 });
 
 
-exchangeIcon.addEventListener('click', () => { //exchanging textarea and select tag values
+exchangeIcon.addEventListener('click', () => { 
     let tempText = formText.value,
         tempLang = selectTag[0].value;
     formText.value = toText.value;

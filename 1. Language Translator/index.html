@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0ed0199a47.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="languages.js"></script>
+    <script src="languages.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -15,8 +15,8 @@
         <h1>Language Translator</h1>
         <div class="wrapper">
             <div class="text-input">
-                <textarea class="from-text" placeholder="Enter text"></textarea>
-                <textarea class="to-text" placeholder="Translation" readonly disabled></textarea>
+                <textarea class="from-text" placeholder="Enter text" spellcheck="false"></textarea>
+                <textarea class="to-text" placeholder="Translation" readonly disabled spellcheck="false"></textarea>
             </div>
 
             <ul class="controls">
